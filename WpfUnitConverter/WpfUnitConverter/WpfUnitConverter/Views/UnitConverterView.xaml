@@ -29,56 +29,51 @@
                 HorizontalAlignment="Center"
                 Content="The Converter"
                 FontSize="24"/>
-        </StackPanel>
-        <StackPanel
-            Orientation="Horizontal"
-            VerticalAlignment="Bottom"
-            Margin="124"
-            HorizontalAlignment="Center">
-            <TextBox
-                Width="100"
-                Height="30"
-                Margin="20"
-                HorizontalContentAlignment="Right"
-                Text="{Binding Result}"
-                />
-            <ComboBox
-                Width="100"
-                Height="30"
-                Margin="20"
-                ItemsSource="{Binding Units}"
-                SelectedItem="{Binding OperandUnit, Mode=TwoWay}">
-              </ComboBox>
-        </StackPanel>
-        <StackPanel
-            Orientation="Horizontal"
-            Margin="12"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center">
-            <TextBox
+            <StackPanel
+            Orientation="Horizontal">
+                <TextBox
                 Width="100"
                 Height="30"
                 Margin="20"
                 HorizontalContentAlignment="Right"
                 Text="{Binding Operand}"
                 />
-            <ComboBox
+                <ComboBox
+                Width="100"
+                Height="30"
+                Margin="20"
+                ItemsSource="{Binding Units}"
+                SelectedItem="{Binding OperandUnit, Mode=TwoWay}">
+                </ComboBox>
+            </StackPanel>
+            <StackPanel
+            Orientation="Horizontal">
+                <TextBox
+                Width="100"
+                Height="30"
+                Margin="20"
+                HorizontalContentAlignment="Right"
+                Text="{Binding Result}"
+                />
+                <ComboBox
                 Width="100"
                 Height="30"
                 Margin="20"
                 ItemsSource="{Binding Units}"
                 SelectedItem="{Binding ResultUnit, Mode=TwoWay}">
-            </ComboBox>
-        </StackPanel>
-        <StackPanel
+                </ComboBox>
+            </StackPanel>
+            <StackPanel
             VerticalAlignment="Bottom"
             Margin="12">
-            <Button
+                <Button
             Content="Convert"
             Style="{StaticResource MainPanelButtonStyle}"
             Command="{Binding ButtonConvertCommand}"
             CommandParameter="Convert"/>
+            </StackPanel>
         </StackPanel>
+        
 
         
         
